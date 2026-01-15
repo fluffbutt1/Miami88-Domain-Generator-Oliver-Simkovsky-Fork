@@ -28,13 +28,14 @@ window.onload = function () {
   for (let index in pronoun) {
     for (let secondIndex in adj) {
       for (let thirdIndex in noun) {
-         let myUL = document.getElementById("myUl");
-          let myLi = document.createElement("li");
-          const element = document.getElementById("myUl");
+        let myUL = document.getElementById("myUl");
+        let myLi = document.createElement("li");
+        myLi.id = "myLi";
+        const element = document.getElementById("myUl");
 
-          myLi.textContent = pronoun[index] + adj[secondIndex] + noun[thirdIndex] + end;
-          myUL.appendChild(myLi);
-          element.className = bootstrapColors[rand];
+        myLi.textContent = pronoun[index] + adj[secondIndex] + noun[thirdIndex] + end;
+        myUL.appendChild(myLi);
+        element.className = bootstrapColors[rand];
       }
     }
   }
