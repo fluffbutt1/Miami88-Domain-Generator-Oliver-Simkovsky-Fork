@@ -19,8 +19,7 @@ window.onload = function () {
     "text-danger",
     "text-warning",
     "text-info",
-    "text-light",
-    "text-dark"
+    "text-light"
   ];
 
   let rand = Math.floor(Math.random(bootstrapColors) * bootstrapColors.length);
