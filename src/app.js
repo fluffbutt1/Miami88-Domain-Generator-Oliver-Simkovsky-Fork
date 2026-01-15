@@ -8,8 +8,8 @@ import "./assets/img/4geeks.ico";
 window.onload = function () {
   //write your code here
   let pronoun = ['the', 'our'];
-  let adj = ['great', 'big'];
-  let noun = ['jogger', 'racoon'];
+  let adj = ['sneaky', 'sussy'];
+  let noun = ['crewmate', 'imposter'];
   let end = ['com', 'net'];
 
   const bootstrapColors = [
