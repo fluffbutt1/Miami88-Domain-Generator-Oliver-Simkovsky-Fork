@@ -10,10 +10,15 @@ window.onload = function() {
   let pronoun = ['the', 'our'];
   let adj = ['great', 'big'];
   let noun = ['jogger', 'racoon'];
+
   for(let index in pronoun){
     for(let secondIndex in adj){
       for(let thirdIndex in noun){
-        console.log(pronoun[index] + adj[secondIndex] + noun[thirdIndex]);
+        let myUL = document.getElementById("myUl");
+        let myLi = document.createElement("li");
+        
+        myLi.textContent = pronoun[index] + adj[secondIndex] + noun[thirdIndex];
+        myUL.appendChild(myLi);
       }
     }
   }
