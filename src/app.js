@@ -10,7 +10,7 @@ window.onload = function () {
   let pronoun = ['the', 'our'];
   let adj = ['great', 'big'];
   let noun = ['jogger', 'racoon'];
-  let end = '.com'
+  let end = ['com', 'net'];
 
   const bootstrapColors = [
     "text-primary",
@@ -28,14 +28,14 @@ window.onload = function () {
   for (let index in pronoun) {
     for (let secondIndex in adj) {
       for (let thirdIndex in noun) {
-        let myUL = document.getElementById("myUl");
-        let myLi = document.createElement("li");
-        myLi.id = "myLi";
-        const element = document.getElementById("myUl");
+        for (let fourthIndex in end) {
+          let myUL = document.getElementById("myUl");
+          let myLi = document.createElement("li");
+          myUL.className = bootstrapColors[rand];
 
-        myLi.textContent = pronoun[index] + adj[secondIndex] + noun[thirdIndex] + end;
-        myUL.appendChild(myLi);
-        element.className = bootstrapColors[rand];
+          myLi.textContent = pronoun[index] + adj[secondIndex] + noun[thirdIndex] + "." + end[fourthIndex];
+          myUL.appendChild(myLi);
+        }
       }
     }
   }

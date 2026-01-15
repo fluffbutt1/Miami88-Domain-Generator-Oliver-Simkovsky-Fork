@@ -7,3 +7,12 @@ body{
     width: 100vw;
     height: 100vh;
 }
+
+#myUl{
+    animation: spin 1s linear;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
