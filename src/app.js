@@ -7,10 +7,10 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function () {
   //write your code here
-  let pronoun = ['the', 'our'];
-  let adj = ['sneaky', 'sussy'];
-  let noun = ['crewmate', 'imposter'];
-  let end = ['com', 'net'];
+  const pronouns = ['the', 'our'];
+  const adjectives = ['sneaky', 'sussy'];
+  const nouns = ['crewmate', 'imposter'];
+  const suffixes = ['com', 'net'];
 
   const bootstrapColors = [
     "text-primary",
@@ -22,17 +22,17 @@ window.onload = function () {
     "text-light"
   ];
 
-  let rand = Math.floor(Math.random(bootstrapColors) * bootstrapColors.length);
+  let randomBootstrapColors = Math.floor(Math.random(bootstrapColors) * bootstrapColors.length);
 
-  for (let index in pronoun) {
-    for (let secondIndex in adj) {
-      for (let thirdIndex in noun) {
-        for (let fourthIndex in end) {
+  for (let index in pronouns) {
+    for (let secondIndex in adjectives) {
+      for (let thirdIndex in nouns) {
+        for (let fourthIndex in suffixes) {
           let myUL = document.getElementById("myUl");
           let myLi = document.createElement("li");
-          myUL.className = bootstrapColors[rand];
+          myUL.className = bootstrapColors[randomBootstrapColors];
 
-          myLi.textContent = pronoun[index] + adj[secondIndex] + noun[thirdIndex] + "." + end[fourthIndex];
+          myLi.textContent = pronouns[index] + adjectives[secondIndex] + nouns[thirdIndex] + "." + suffixes[fourthIndex];
           myUL.appendChild(myLi);
         }
       }
